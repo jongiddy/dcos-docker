@@ -138,6 +138,6 @@ else
   exit 1
 fi
 TARGET="dcos-adminrouter"
-CMD="curl --insecure --fail --location --silent http://127.0.0.1:${API_PORT}/"
-STATUS_CMD="curl --insecure --fail --location --silent -o /dev/null -w "%{http_code}" http://127.0.0.1:${API_PORT}/"
+CMD="curl --insecure --fail --location --silent http://127.0.0.1:${API_PORT}/dcos-metadata/dcos-version.json"
+STATUS_CMD="curl --insecure --fail --location --silent -o /dev/null -w "%{http_code}" http://127.0.0.1:${API_PORT}/dcos-metadata/dcos-version.json"
 await
